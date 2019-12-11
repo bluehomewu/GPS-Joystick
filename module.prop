@@ -1,0 +1,6 @@
+id=gps
+name=GPS Joystick systemize
+version=v2
+versionCode=191211
+author=EdwardWu(@bluehomewu)
+description=Add GPS Joystick in your /system/priv-app
