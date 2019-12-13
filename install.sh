@@ -126,7 +126,7 @@ REPLACE="
 print_modname() {
   ui_print "*******************************"
   ui_print "Add GPS Joysticks in your system"
-  ui_print. by EdwardWu(@bluehomewu)
+  ui_print "by EdwardWu(@bluehomewu)"
   ui_print "*******************************"
 }
 
