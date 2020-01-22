@@ -124,12 +124,36 @@ REPLACE="
 # Set what you want to display when installing your module
 
 print_modname() {
-  ui_print "*******************************"
-  ui_print "Add GPS Joysticks in your system"
-  ui_print "by EdwardWu(@bluehomewu)"
-  ui_print "*******************************"
+VERSIONID=`grep_prop version $TMPDIR/module.prop`
+SDKVERSIONID=`grep_prop sdkversion $TMPDIR/module.prop`
+BUILDDATEID=`grep_prop builddate $TMPDIR/module.prop`
+AUTHORID=`grep_prop author $TMPDIR/module.prop`
+TELEGRAMID=`grep_prop telegram $TMPDIR/module.prop`
+
+ui_print " ********* GPS Joystick $VERSIONID *********"
+ui_print " SDK version : $SDKVERSIONID"
+ui_print " Build date  : $BUILDDATEID"
+ui_print " Author      : $AUTHORID"
+ui_print " Telegram    : $TELEGRAMID"
+ui_print " *************************************"
+ui_print " 本模組尚未支援Android 10(SaR)"
+ui_print " It still not support Android(SaR)"
+ui_print " *************************************"
+ui_print " "
+ui_print " ******************"
+ui_print "  Powerd by Magisk"
+ui_print " ******************"
 }
 
+Check_Andorid_Version() {
+    ui_print "- Checking your Andorid Version..."
+	
+    if [ $API -lt 29 ]; then 
+	    ui_print "-- You aren't on Andorid 10 !"
+	else 
+	    abort "! GPS Joystick Module still not support Andoird 10 !"
+    fi
+}
 # Copy/extract your module files into $MODPATH in on_install.
 
 on_install() {
