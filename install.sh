@@ -159,6 +159,12 @@ Check_Andorid_Version() {
 on_install() {
   # The following is the default implementation: extract $ZIPFILE/system to $MODPATH
   # Extend/change the logic to whatever you want
+      if [ $API -lt 29 ]; then 
+	    ui_print "-- You aren't on Andorid 10 !"
+	else 
+	    abort "! GPS Joystick Module still not support Andoird 10 !"
+    fi
+    
   ui_print "- Extracting module files"
   unzip -o "$ZIPFILE" 'system/*' -d $MODPATH >&2
 }
