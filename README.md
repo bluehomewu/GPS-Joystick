@@ -6,4 +6,4 @@ Android 6~Android 9
 It still not support Android 10(A-only/AB slot).
 
 **Version 4 is the final version**
-**Share The Module Please Indicate source**
+**Share The Module Please Indicate Source**
