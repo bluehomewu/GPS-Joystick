@@ -1,10 +1,10 @@
 id=gps
 name=GPS Joystick systemize
-version=v4
-versionCode=200122
+version=v5
+versionCode=200211
 author=EdwardWu(xda@bluehomewu)
 description=Add GPS Joystick in your /system/priv-app
 
-builddate=2020/01/22 14:30 GMT+8
+builddate=2020/02/11 19:05 GMT+8
 sdkversion=28
 telegram=https://t.me/edwardwu0223
